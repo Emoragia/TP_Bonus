@@ -14,7 +14,7 @@ class Produits
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 10)]
+    #[ORM\Column(length: 10, unique: true)]
     private ?string $reference = null;
 
     #[ORM\Column(length: 50)]
@@ -30,7 +30,7 @@ class Produits
     private ?int $stock = null;
 
     #[ORM\Column]
-    private ?bool $published = null;
+    private ?bool $published = false;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date_add = null;

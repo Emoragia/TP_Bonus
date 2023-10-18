@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+        {{ form_start(produitForm) }}
+
+        {{ form_widget(produitForm) }}
+
+        <button >Crée !</button>
+
+        {{ form_end(produitForm) }}
+
+{% endblock %}
+
+{% block title %}
+
+    Crée un nouveau produit ! {{ parent() }}
+
+{% endblock %}
+
